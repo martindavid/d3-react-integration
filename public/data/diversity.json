@@ -1,0 +1,139 @@
+[
+    "Customer",
+    [
+        58,
+        11581
+    ],
+    {
+        "Male": [
+            "Male",
+            [
+                37,
+                374
+            ],
+            {
+                "East Asian": [
+                    "East Asian",
+                    [
+                        1,
+                        270
+                    ],
+                    {}
+                ],
+                "African-American/Black": [
+                    "African-American/Black",
+                    [
+                        2,
+                        17
+                    ],
+                    {}
+                ],
+                "East Asian": [
+                    "East Asian",
+                    [
+                        1,
+                        87
+                    ],
+                    {}
+                ],
+                "Hispanic": [
+                    "Hispanic",
+                    [
+                        1,
+                        87
+                    ],
+                    {}
+                ],
+                "South Asian": [
+                    "South Asian",
+                    [
+                        3,
+                        87
+                    ],
+                    {}
+                ],
+                "Southeast Asian": [
+                    "Southeast Asian",
+                    [
+                        1,
+                        87
+                    ],
+                    {}
+                ],
+                "White": [
+                    "White",
+                    [
+                        29,
+                        87
+                    ],
+                    {}
+                ]
+            }
+        ],
+        "Female": [
+            "Female",
+            [
+                21,
+                677
+            ],
+            {
+                "East Asian": [
+                    "East Asian",
+                    [
+                        0,
+                        270
+                    ],
+                    {}
+                ],
+                "African-American/Black": [
+                    "African-American/Black",
+                    [
+                        1,
+                        17
+                    ],
+                    {}
+                ],
+                "East Asian": [
+                    "East Asian",
+                    [
+                        1,
+                        87
+                    ],
+                    {}
+                ],
+                "Hispanic": [
+                    "Hispanic",
+                    [
+                        2,
+                        87
+                    ],
+                    {}
+                ],
+                "South Asian": [
+                    "South Asian",
+                    [
+                        1,
+                        87
+                    ],
+                    {}
+                ],
+                "Southeast Asian": [
+                    "Southeast Asian",
+                    [
+                        1,
+                        87
+                    ],
+                    {}
+                ],
+                "White": [
+                    "White",
+                    [
+                        15,
+                        87
+                    ],
+                    {}
+                ]
+            }
+        ]
+    }
+]

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import Home from 'containers/Home';
 import MapExample from 'containers/MapExample';
+import PieExample from 'containers/PieExample';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
@@ -37,6 +38,7 @@ class App extends Component {
                 <Switch>
                   <Route exact path='/' component={Home} />
                   <Route path='/map-example' component={MapExample} />
+                  <Route path='/pie' component={PieExample} />
                 </Switch>
               </div>
             </div>

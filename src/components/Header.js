@@ -49,6 +49,14 @@ class Header extends Component {
               >Map Example
               </NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink
+                tag={RRNavLink}
+                activeClassName='active'
+                to='/pie'
+              >Pie Example
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
