@@ -75,28 +75,7 @@ class Sunburst extends React.Component {
       svg.selectAll('path')
         .data(partition(root).descendants())
         .enter().append('path')
-        .style('fill', (d) => {
-          let hue;
-          const current = d;
-
-          if (d.data.color) {
-            console.log(d.data.color);
-            return d.data.color;
-          }
-          if (current.depth === 0) {
-            return '#33cccc';
-          }
-          if (current.depth <= 1) {
-            hue = hueDXScale(d.x0);
-            current.fill = d3.hsl(hue, 0.5, 0.6);
-            return current.fill;
-          }
-          current.fill = current.parent.fill.brighter(0.5);
-          const hsl = d3.hsl(current.fill);
-          hue = hueDXScale(current.x0);
-          const colorshift = hsl.h + (hue / 4);
-          return d3.hsl(colorshift, hsl.s, hsl.l);
-        })
+        .style('fill', d => d.data.color)
         .attr('stroke', '#fff')
         .attr('stroke-width', '1')
         .on('click', d => click(d, node, svg, self, x, y, radius, arc))
@@ -141,7 +120,7 @@ class Sunburst extends React.Component {
         gWidth = props.width,
         gHeight = props.height,
         radius = (Math.min(gWidth, gHeight) / 2) - 10,
-        svg = d3.select('svg')
+        svg = d3.select(`#${props.keyId}-svg`)
           .append('g')
           .attr('transform', `translate(${gWidth / 2},${gHeight / 2})`),
         x = d3.scaleLinear().range([ 0, 2 * Math.PI ]),
@@ -150,7 +129,10 @@ class Sunburst extends React.Component {
         arc = d3.arc()
           .startAngle(d => Math.max(0, Math.min(2 * Math.PI, x(d.x0))))
           .endAngle(d => Math.max(0, Math.min(2 * Math.PI, x(d.x1))))
-          .innerRadius(d => Math.max(0, y(d.y0)))
+          .innerRadius((d) => {
+            console.log(d);
+            return Math.max(0, y(d.y0));
+          })
           .outerRadius(d => Math.max(0, y(d.y1))),
         hueDXScale = d3.scaleLinear()
           .domain([ 0, 1 ])
